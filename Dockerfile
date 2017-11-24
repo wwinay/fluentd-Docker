@@ -32,12 +32,13 @@ RUN echo $'<source>\n\
   bind 0.0.0.0\n\
   port 24284\n\
 
-  shared_key ocpaggregatedloggingsharedkey\n\
+  #shared_key ocpaggregatedloggingsharedkey\n\
 
-  secure yes\n\
-  cert_path        /etc/td-agent/certs/ca_cert.pem\n\
-  private_key_path /etc/td-agent/certs/ca_key.pem\n\
-  private_key_passphrase ocpsecureforward\n\
+  secure no\n\
+  enable_strict_verification no\n\
+  #cert_path        /etc/td-agent/certs/ca_cert.pem\n\
+  #private_key_path /etc/td-agent/certs/ca_key.pem\n\
+  #private_key_passphrase ocpsecureforward\n\
 </source>\n\
 <match **>\n\
    type splunk_ex\n\
